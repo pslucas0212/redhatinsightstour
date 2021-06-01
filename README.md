@@ -1,8 +1,14 @@
 # The Insights Tour for Red Hat Enterprise Linux
+Updated 1 June 2021
+
 A tour of using Red Hat Insights with Red Hat Enterprise Linux
+
+??Intro Paragraph here??
 
 
 ### References
+Note: Red Hat continues to add new features and enhance the Red Hat Insights user experience.  Some of the screen shot and UI navigation instructions from older articles may not map directly to the current Red Hat Insights UI.
+
 - [Simplify troubleshooting RHEL system configurations with Red Hat Insights Drift service ](https://www.redhat.com/en/blog/simplify-troubleshooting-rhel-system-configurations-red-hat-insights-drift-service?channel=blog/channel/red-hat-insights)
 - [Defense in depth with Red Hat Insights](https://www.redhat.com/en/blog/defense-depth-red-hat-insights?channel=blog/channel/red-hat-insights) - February 24, 2021
 - [Integrating a monitoring system with Red Hat Insights](https://www.redhat.com/en/blog/integrating-monitoring-system-red-hat-insights?channel=blog/channel/red-hat-insights) - January 11, 2021
