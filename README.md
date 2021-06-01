@@ -3,10 +3,39 @@ Updated 1 June 2021
 
 A tour of using Red Hat Insights with Red Hat Enterprise Linux
 
-??Intro Paragraph here??
+### Introduction
+In this tutorial, we will be focusing on the Red Hat Enterprise Linux portion of Red Hat Insights.  Red Hat Insights (RHI) is part of your Red Hat Enterprise Linux (RHEL) subscription and supports RHEL 6.4+, 7.0+, and 8.0+.  
 
+From the Red Hat Insights FAQ (see link below): "Red Hat Insights is a Red Hat software-as-a-service(SaaS) offering that helps IT teams proactively identify and remediate threats to security, performance, availability, and stability. Before subscribers need to come to Red Hat’s customer portal to troubleshoot, investigate, or learn how to avoid issues, outages, and unplanned downtime, Insights uses software to ensure their entire Red Hat Enterprise Linux environment is operating optimally. No other Linux provider offers this type of proactive, automated, and targeted resolution to ensure a secure, reliable, efficient, and scalable infrastructure environment."
+
+### Setting Up RHEL with Insights
+Register RHEL to the RHSM Service
+- You will need to have your RHEL instance Registered with the Red Hat Subscription Manager to access RHI.  See the following examples to register a system via subscription manager for RHEL 6.0+, 7.0+ and 8.0+.  Note: You will need to use sudo or be root to execute these commands.
+
+      # subscription-manager register --org=xxxxxxxxx --activationkey=your_key_here
+      
+- Verify that the registered system content access mode is set to SCA.  Note: You will only see the SCA status on RHEL 7.0+ and 8.0+
+
+      # subscription-manager status
+      
+Enable the RHI client.
+- Insights setup for RHEL 8
+
+      # insights-client --enable
+      
+- Insights setup for RHEL 6.4+ and 7.0+
+
+      # yum -y install insights-client
+      # insights-client --enable
+        
 
 ### References
+
+- [Registration Assistant](https://access.redhat.com/labs/registrationassistant/)
+- [Red Hat Insights FAQ](https://access.redhat.com/articles/4602981)
+- [Insights-client Configuration Options for Red Hat Insights ](https://access.redhat.com/articles/4099591)
+- 
+
 Note: Red Hat continues to add new features and enhance the Red Hat Insights user experience.  Some of the screen shot and UI navigation instructions from older articles may not map directly to the current Red Hat Insights UI.
 
 - [Simplify troubleshooting RHEL system configurations with Red Hat Insights Drift service ](https://www.redhat.com/en/blog/simplify-troubleshooting-rhel-system-configurations-red-hat-insights-drift-service?channel=blog/channel/red-hat-insights)
