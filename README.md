@@ -10,7 +10,7 @@ From the Red Hat Insights FAQ (see link below): "Red Hat Insights is a Red Hat s
 
 ### Setting Up RHEL with Insights
 Register RHEL to the RHSM Service
-- You will need to have your RHEL instance Registered with the Red Hat Subscription Manager to access RHI.  See the following examples to register a system via subscription manager for RHEL 6.0+, 7.0+ and 8.0+.  Note: You will need to use sudo or be root to execute these commands.
+- You will need to have your RHEL instance Registered with the Red Hat Subscription Manager to access RHI.  See the following examples to register a system via subscription manager for RHEL 6.0+, 7.0+ and 8.0+.  You can register your RHEL system via a user-id and password or an organization and activation key.  I prefere the activation key since I don't want to tie my registeration to a userid.  Also there are other Satellite (Red Hat Smart Mananagement) use cases where the use of an activation key is a better choice.   Note: You will need to use sudo or be root to execute these commands.
 
       # subscription-manager register --org=xxxxxxxxx --activationkey=your_key_here
       
@@ -18,7 +18,8 @@ Register RHEL to the RHSM Service
 
       # subscription-manager status
       
-Enable the RHI client.
+Enable the RHI client.  RHEL 8 comes with the Insights client installed.  RHEL 7 comes with Insights client RPMs, but not installed.  RHEL 6.10+ you download the RPMs and install the Insights client.
+
 - Insights setup for RHEL 8
 
       # insights-client --enable
